@@ -67,6 +67,29 @@ if _lang.startswith("fr"):
             ("Haute qualité (couleurs)", "/prepress"),
         ],
     }
+elif _lang.startswith("es"):
+    T = {
+        "menu_label":   "Comprimir PDF…",
+        "dialog_title": "Comprimir PDF",
+        "choose_level": "Elige un nivel de optimización:",
+        "save_as":      "Guardar PDF como…",
+        "compressing":  "Comprimiendo…",
+        "done_title":   "Comprimir PDF – Hecho",
+        "done_msg":     "{name} se ha comprimido correctamente.",
+        "err_gs":       "ghostscript no está instalado. Instálalo primero.",
+        "err_nopdf":    "El archivo seleccionado no es un PDF válido.",
+        "err_failed":   "La compresión ha fallado (código de salida {code}).",
+        "cancel":       "Cancelar",
+        "ok":           "Aceptar",
+        "postpend":     "-optimized",
+        "levels": [
+            ("Predeterminado",                  "/default"),
+            ("Solo visualización en pantalla",  "/screen"),
+            ("Calidad baja",                    "/ebook"),
+            ("Calidad alta",                    "/printer"),
+            ("Calidad alta (color prepress)",   "/prepress"),
+        ],
+    }
 else:
     T = {
         "menu_label":   "Compress PDF…",

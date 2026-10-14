@@ -57,8 +57,8 @@ class EditFileExtension(GObject.GObject, Nautilus.MenuProvider):
         # Créer l'élément de menu (Label fixe comme demandé)
         item = Nautilus.MenuItem(
             name='EditFileExtension::EditFile',
-            label=f'Ouvrir avec Gedit',
-            tip=f'Ouvrir la sélection dans {self.editor}'
+            label='Abrir con Gedit',
+            tip=f'Abrir la selección en {self.editor}'
         )
         
         # On connecte en passant la liste complète des fichiers

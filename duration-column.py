@@ -173,8 +173,8 @@ class DurationColumnExtension(
         return [Nautilus.Column(
             name        = "NautilusPython::duration_column",
             attribute   = "duration",
-            label       = "Duration",
-            description = "Duration of audio/video files",
+            label       = "Duración",
+            description = "Duración de los archivos de audio y vídeo",
         )]
 
     def update_file_info(self, file_info):

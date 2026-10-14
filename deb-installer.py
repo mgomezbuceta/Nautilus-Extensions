@@ -82,6 +82,27 @@ elif _lang.startswith("de"):
         "deps_checking": "Abhängigkeiten werden geprüft…",
         "deps_error":    "Abhängigkeiten konnten nicht geprüft werden.",
     }
+elif _lang.startswith("es"):
+    T = {
+        "menu_label":    "Instalar paquete",
+        "title":         "Instalación de paquete",
+        "package":       "Paquete:",
+        "install":       "Instalar",
+        "close":         "Cerrar",
+        "cancel":        "Cancelar",
+        "installing":    "Instalando…",
+        "success":       "✓ Instalación completada correctamente.",
+        "error":         "✗ La instalación ha fallado.",
+        "cancelled":     "Instalación cancelada.",
+        "need_password": "Se requiere autenticación (contraseña de sudo).",
+        "not_deb":       "Este archivo no es un paquete .deb válido.",
+        "confirm":       "¿Quieres instalar este paquete?",
+        "warning":       "⚠ Instalar paquetes de terceros puede ser arriesgado.\nComprueba el origen antes de continuar.",
+        "deps_none":     "No se requieren dependencias adicionales.",
+        "deps_title":    "Dependencias que se instalarán:",
+        "deps_checking": "Comprobando dependencias…",
+        "deps_error":    "No se han podido comprobar las dependencias.",
+    }
 else:
     T = {
         "menu_label":    "Install package",

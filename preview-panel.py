@@ -76,6 +76,31 @@ if _lang.startswith("fr"):
         "exif_aperture":"Ouverture",
         "loading":     "Chargement…",
     }
+elif _lang.startswith("es"):
+    T = {
+        "title":       "Vista previa",
+        "menu_label":  "Vista previa",
+        "no_preview":  "No hay vista previa disponible",
+        "file_info":   "Información del archivo",
+        "size":        "Tamaño",
+        "modified":    "Modificado",
+        "permissions": "Permisos",
+        "mime":        "Tipo",
+        "dimensions":  "Dimensiones",
+        "duration":    "Duración",
+        "pages":       "Páginas",
+        "lines":       "Líneas",
+        "title_meta":  "Título",
+        "subject":     "Asunto",
+        "exif_make":   "Marca de la cámara",
+        "exif_model":  "Modelo de la cámara",
+        "exif_date":   "Fecha de captura",
+        "exif_focal":  "Distancia focal",
+        "exif_iso":    "ISO",
+        "exif_shutter":"Velocidad de obturación",
+        "exif_aperture":"Apertura",
+        "loading":     "Cargando…",
+    }
 else:
     T = {
         "title":       "Preview",
