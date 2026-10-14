@@ -34,7 +34,7 @@ import locale
 import gi
 gi.require_version("Gtk", "4.0")
 gi.require_version("Adw", "1")
-gi.require_version("Nautilus", "4.0")
+gi.require_version("Nautilus", "4.1")
 from gi.repository import GObject, Gtk, Adw, Gdk, GLib, Nautilus, Pango
 
 # ---------------------------------------------------------------------------
@@ -58,6 +58,23 @@ if _lang.startswith("fr"):
         "no_active":    "Aucune extension active",
         "no_disabled":  "Aucune extension désactivée",
         "restart_warn": "⚠ Redémarrer Nautilus fermera toutes les fenêtres.",
+    }
+elif _lang.startswith("es"):
+    T = {
+        "menu_label":   "Gestionar extensiones",
+        "title":        "Gestor de extensiones",
+        "active":       "Activas",
+        "disabled":     "Desactivadas",
+        "enable":       "Activar",
+        "disable":      "Desactivar",
+        "restart":      "Reiniciar Nautilus",
+        "restart_msg":  "Nautilus se reiniciará para aplicar los cambios.",
+        "confirm":      "Confirmar",
+        "cancel":       "Cancelar",
+        "this_ext":     "(este gestor)",
+        "no_active":    "No hay extensiones activas",
+        "no_disabled":  "No hay extensiones desactivadas",
+        "restart_warn": "⚠ Al reiniciar Nautilus se cerrarán todas las ventanas.",
     }
 else:
     T = {

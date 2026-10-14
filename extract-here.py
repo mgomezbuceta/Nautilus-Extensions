@@ -38,7 +38,7 @@ import tempfile
 import gi
 gi.require_version("Gtk", "4.0")
 gi.require_version("Adw", "1")
-gi.require_version("Nautilus", "4.0")
+gi.require_version("Nautilus", "4.1")
 from gi.repository import GObject, Gtk, Adw, Gio, GLib, Nautilus
 
 # ---------------------------------------------------------------------------
@@ -60,6 +60,21 @@ if _lang.startswith("fr"):
         "volumes_found":  "{n} partie(s) détectée(s) — extraction automatique.",
         "cancel":         "Annuler",
         "ok":             "Extraire",
+    }
+elif _lang.startswith("es"):
+    T = {
+        "menu_label":     "Extraer aquí…",
+        "menu_label_vol": "Extraer volumen aquí…",
+        "title":          "Extracción",
+        "extracting":     "Extrayendo…",
+        "done_msg":       "Extraído en: {dst}",
+        "err_7z":         "No se encuentra p7zip.\nInstálalo con:\nsudo apt install p7zip-full",
+        "err_failed":     "La extracción ha fallado (código de salida {code})",
+        "err_password":   "Contraseña incorrecta o archivo dañado.",
+        "password_label": "Contraseña (déjala vacía si no tiene):",
+        "volumes_found":  "{n} parte(s) encontrada(s) — extrayendo automáticamente.",
+        "cancel":         "Cancelar",
+        "ok":             "Extraer",
     }
 else:
     T = {

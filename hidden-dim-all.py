@@ -26,7 +26,7 @@
 #   nautilus -q
 
 import gi
-gi.require_version("Nautilus", "4.0")
+gi.require_version("Nautilus", "4.1")
 gi.require_version("Gtk",     "4.0")
 from gi.repository import Nautilus, GObject, Gtk, GLib, Gio
 

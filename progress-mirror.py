@@ -30,7 +30,7 @@ import gi
 import time
 import locale
 
-gi.require_version("Nautilus", "4.0")
+gi.require_version("Nautilus", "4.1")
 gi.require_version("Gtk", "4.0")
 gi.require_version("Adw", "1")
 from gi.repository import Nautilus, GObject, Gtk, Adw, GLib, Pango
@@ -52,6 +52,8 @@ if _lang.startswith("fr"):
     T = {"title": "Opérations en cours", "cancel": "Annuler"}
 elif _lang.startswith("de"):
     T = {"title": "Laufende Vorgänge", "cancel": "Abbrechen"}
+elif _lang.startswith("es"):
+    T = {"title": "Operaciones de archivos", "cancel": "Cancelar"}
 else:
     T = {"title": "File operations", "cancel": "Cancel"}
 
