@@ -98,7 +98,7 @@ sudo apt install \
   python3-gi \
   gir1.2-gtk-4.0 \
   gir1.2-adw-1 \
-  gir1.2-nautilus-4.0 \
+  gir1.2-nautilus-4.1 \
   ghostscript \
   ffmpeg \
   python3-pypdf \
@@ -106,6 +106,19 @@ sudo apt install \
   p7zip-full \
   unrar \
   poppler-utils
+```
+
+### Ubuntu 26.04 (Nautilus 50)
+
+These extensions target the `Nautilus 4.1` API shipped with Ubuntu 26.04.
+
+If your session `PATH` puts another Python first (conda, Homebrew/linuxbrew), the Python embedded in nautilus-python cannot import `gi` and **no** Python extension loads (`ModuleNotFoundError: No module named 'gi'` in `journalctl --user`). Start Nautilus with a clean `PATH` by overriding its D-Bus service:
+
+```bash
+mkdir -p ~/.local/share/dbus-1/services
+printf '[D-BUS Service]\nName=org.gnome.Nautilus\nExec=/usr/bin/env PATH=/usr/local/bin:/usr/bin:/bin /usr/bin/nautilus --gapplication-service\n' \
+  > ~/.local/share/dbus-1/services/org.gnome.Nautilus.service
+nautilus -q
 ```
 
 ### Install
