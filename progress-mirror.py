@@ -30,7 +30,7 @@ import gi
 import time
 import locale
 
-gi.require_version("Nautilus", "4.0")
+gi.require_version("Nautilus", "4.1")
 gi.require_version("Gtk", "4.0")
 gi.require_version("Adw", "1")
 from gi.repository import Nautilus, GObject, Gtk, Adw, GLib, Pango

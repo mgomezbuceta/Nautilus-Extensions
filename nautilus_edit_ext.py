@@ -21,6 +21,8 @@
 # along with this program. If not, see <https://www.gnu.org/licenses/>.
 #
 
+import gi
+gi.require_version("Nautilus", "4.1")
 from gi.repository import Nautilus, GObject
 import subprocess
 import os
