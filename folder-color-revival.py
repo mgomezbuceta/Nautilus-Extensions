@@ -30,7 +30,7 @@ log.debug("Extension loading...")
 
 gi.require_version("Gtk", "4.0")
 gi.require_version("Gdk", "4.0")
-gi.require_version("Nautilus", "4.0")
+gi.require_version("Nautilus", "4.1")
 
 from gi.repository import Nautilus, Gtk, Gdk, GObject, Gio, GLib
 

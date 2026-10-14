@@ -35,7 +35,7 @@ import locale
 import gi
 gi.require_version("Gtk", "4.0")
 gi.require_version("Adw", "1")
-gi.require_version("Nautilus", "4.0")
+gi.require_version("Nautilus", "4.1")
 from gi.repository import GObject, Gtk, Adw, Gdk, Gio, GLib, Pango, Nautilus
 
 # ---------------------------------------------------------------------------
@@ -58,6 +58,14 @@ elif _lang.startswith("fr"):
         "go_up":      "Dossier parent",
         "refresh":    "Actualiser",
         "err_title":  "Erreur",
+    }
+elif _lang.startswith("es"):
+    T = {
+        "menu_label": "Abrir en vista de columnas",
+        "title":      "Explorador de columnas",
+        "go_up":      "Carpeta superior",
+        "refresh":    "Actualizar",
+        "err_title":  "Error",
     }
 else:
     T = {

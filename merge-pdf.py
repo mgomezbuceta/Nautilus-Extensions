@@ -35,7 +35,7 @@ import locale
 import gi
 gi.require_version("Gtk", "4.0")
 gi.require_version("Adw", "1")
-gi.require_version("Nautilus", "4.0")
+gi.require_version("Nautilus", "4.1")
 from gi.repository import GObject, Gtk, Adw, Gio, Nautilus
 
 # ---------------------------------------------------------------------------
@@ -60,6 +60,24 @@ if _lang.startswith("fr"):
         "move_up":       "↑",
         "move_down":     "↓",
         "output_name":   "fusion.pdf",
+    }
+elif _lang.startswith("es"):
+    T = {
+        "menu_label":    "Unir PDF…",
+        "dialog_title":  "Unir PDF",
+        "order_label":   "Arrastra para reordenar los archivos:",
+        "save_as":       "Guardar PDF unido como…",
+        "merging":       "Uniendo…",
+        "done_title":    "Unión completada",
+        "done_msg":      "Los PDF se han unido correctamente.",
+        "err_gs":        "ghostscript no está instalado. Instálalo primero.",
+        "err_single":    "Selecciona al menos dos archivos PDF.",
+        "err_failed":    "La unión ha fallado (código de salida {code}).",
+        "cancel":        "Cancelar",
+        "ok":            "Unir",
+        "move_up":       "↑",
+        "move_down":     "↓",
+        "output_name":   "merged.pdf",
     }
 else:
     T = {

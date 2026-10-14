@@ -36,7 +36,7 @@ import locale
 import gi
 gi.require_version("Gtk", "4.0")
 gi.require_version("Adw", "1")
-gi.require_version("Nautilus", "4.0")
+gi.require_version("Nautilus", "4.1")
 from gi.repository import GObject, Gtk, Adw, Gdk, Gio, GLib, Nautilus, Pango
 
 try:
@@ -138,6 +138,49 @@ elif _lang.startswith("de"):
         "user_dir_MUSIC":      "Musik",
         "user_dir_PICTURES":   "Bilder",
         "user_dir_VIDEOS":     "Videos",
+    }
+elif _lang.startswith("es"):
+    T = {
+        # Navigation
+        "menu_label":          "Explorar archivo comprimido",
+        "title":               "Explorador de archivos comprimidos",
+        "filter":              "Filtrar…",
+        "go_up":               "Carpeta superior",
+        "refresh":             "Actualizar",
+        "home":                "Inicio",
+        # Extraction
+        "extract_all":         "Extraer todo",
+        "extract_sel":         "Extraer selección",
+        "col_name":            "Nombre",
+        "col_size":            "Tamaño",
+        # Password
+        "pwd_title":           "Archivo protegido",
+        "pwd_body":            "Este archivo está cifrado. Introduce la contraseña:",
+        "pwd_placeholder":     "Contraseña",
+        "pwd_cancel":          "Cancelar",
+        "pwd_ok":              "Abrir",
+        "pwd_wrong":           "Contraseña incorrecta",
+        # Creator
+        "create_label":        "Crear archivo comprimido",
+        "create_title":        "Crear archivo comprimido",
+        "create_name":         "Nombre del archivo",
+        "create_format":       "Formato",
+        "create_level":        "Compresión",
+        "create_pwd":          "Contraseña (opcional)",
+        "create_split":        "Dividir en volúmenes (MB, 0=no)",
+        "create_btn":          "Crear",
+        "creating":            "Creando…",
+        "create_done":         "Archivo comprimido creado",
+        "create_err":          "Error de creación",
+        # XDG folders
+        "user_dir_DESKTOP":    "Escritorio",
+        "user_dir_DOWNLOAD":   "Descargas",
+        "user_dir_TEMPLATES":  "Plantillas",
+        "user_dir_PUBLICSHARE":"Público",
+        "user_dir_DOCUMENTS":  "Documentos",
+        "user_dir_MUSIC":      "Música",
+        "user_dir_PICTURES":   "Imágenes",
+        "user_dir_VIDEOS":     "Vídeos",
     }
 else:
     T = {

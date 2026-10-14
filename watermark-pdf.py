@@ -36,7 +36,7 @@ import tempfile
 import gi
 gi.require_version("Gtk", "4.0")
 gi.require_version("Adw", "1")
-gi.require_version("Nautilus", "4.0")
+gi.require_version("Nautilus", "4.1")
 from gi.repository import GObject, Gtk, Adw, Gio, Nautilus
 
 # ---------------------------------------------------------------------------
@@ -72,6 +72,36 @@ if _lang.startswith("fr"):
             ("Gris",    "0.5 0.5 0.5"),
             ("Bleu",    "0 0 0.8"),
             ("Noir",    "0 0 0"),
+        ],
+    }
+elif _lang.startswith("es"):
+    T = {
+        "menu_label":     "Añadir marca de agua…",
+        "dialog_title":   "Marca de agua en PDF",
+        "text_label":     "Texto de la marca de agua",
+        "text_hint":      "Ej. CONFIDENCIAL, NO COMPARTIR…",
+        "opacity_label":  "Opacidad",
+        "angle_label":    "Ángulo",
+        "size_label":     "Tamaño de fuente",
+        "color_label":    "Color",
+        "position_label": "Posición",
+        "pos_center":     "Centro",
+        "pos_diagonal":   "Repetición en diagonal",
+        "save_as":        "Guardar como…",
+        "processing":     "Aplicando marca de agua…",
+        "done_title":     "Marca de agua aplicada",
+        "done_msg":       "Se ha aplicado correctamente la marca de agua a {name}.",
+        "err_gs":         "imagemagick no está instalado. Instálalo primero.",
+        "err_empty":      "El texto de la marca de agua no puede estar vacío.",
+        "err_failed":     "La operación ha fallado (código de salida {code}).",
+        "cancel":         "Cancelar",
+        "ok":             "Aplicar",
+        "postpend":       "-watermarked",
+        "colors": [
+            ("Rojo",  "1 0 0"),
+            ("Gris",  "0.5 0.5 0.5"),
+            ("Azul",  "0 0 0.8"),
+            ("Negro", "0 0 0"),
         ],
     }
 else:
@@ -285,7 +315,7 @@ class WatermarkDialog(Adw.Window):
         outer.append(self._section_label(T["text_label"]))
         self._text_entry = Gtk.Entry()
         self._text_entry.set_placeholder_text(T["text_hint"])
-        self._text_entry.set_text("CONFIDENTIEL" if _lang.startswith("fr") else "CONFIDENTIAL")
+        self._text_entry.set_text("CONFIDENTIEL" if _lang.startswith("fr") else "CONFIDENCIAL" if _lang.startswith("es") else "CONFIDENTIAL")
         outer.append(self._text_entry)
 
         # -- Taille police --

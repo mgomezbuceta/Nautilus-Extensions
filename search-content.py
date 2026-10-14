@@ -35,7 +35,7 @@ import locale
 import gi
 gi.require_version("Gtk",     "4.0")
 gi.require_version("Adw",     "1")
-gi.require_version("Nautilus","4.0")
+gi.require_version("Nautilus", "4.1")
 from gi.repository import GObject, Gtk, Adw, GLib, Pango, Gdk, Nautilus
 
 # ---------------------------------------------------------------------------
@@ -126,6 +126,48 @@ elif _lang.startswith("de"):
         "backup_note":  ".bak-Sicherung für jede geänderte Datei erstellt.",
         "toggle_all":   "Alle an-/abwählen",
         "none_selected":"Keine Zeile ausgewählt.",
+    }
+elif _lang.startswith("es"):
+    T = {
+        "menu_label":   "Buscar en archivos",
+        "title":        "Búsqueda de contenido",
+        "tab_search":   "Buscar",
+        "tab_replace":  "Buscar y reemplazar",
+        "pattern":      "Texto a buscar…",
+        "replace_with": "Reemplazar por…",
+        "extensions":   "Extensiones (p. ej. py,txt,md — vacío = todas)",
+        "recursive":    "Recursivo (subcarpetas)",
+        "case":         "Distinguir mayúsculas y minúsculas",
+        "regex":        "Expresión regular",
+        "search":       "Buscar",
+        "preview":      "Vista previa",
+        "replace_all":  "Reemplazar todo",
+        "clear":        "Limpiar",
+        "tool":         "Herramienta:",
+        "results":      "{n} resultado(s)",
+        "results_max":  "{n} de {total} resultados — límite alcanzado",
+        "no_results":   "Sin resultados.",
+        "searching":    "Buscando…",
+        "replacing":    "Reemplazando…",
+        "previewing":   "Generando vista previa…",
+        "replaced":     "{n} reemplazo(s) en {f} archivo(s) ✓",
+        "preview_info": "{n} reemplazo(s) en {f} archivo(s) — haz clic en “Reemplazar todo” para aplicar",
+        "open_file":    "Abrir archivo",
+        "open_gedit":   "Abrir con Gedit",
+        "open_folder":  "Abrir carpeta",
+        "copy_path":    "Copiar ruta",
+        "col_file":     "Archivo",
+        "col_line":     "Línea",
+        "col_match":    "Contenido",
+        "error":        "Error: ",
+        "empty_search": "Introduce un texto que buscar.",
+        "confirm_title":"Confirmar reemplazo",
+        "confirm_body": "Se modificarán {f} archivo(s). Se creará una copia de seguridad .bak. ¿Continuar?",
+        "confirm_ok":   "Reemplazar",
+        "confirm_cancel":"Cancelar",
+        "backup_note":  "Se ha creado una copia de seguridad .bak de cada archivo modificado.",
+        "toggle_all":   "Marcar / desmarcar todo",
+        "none_selected":"Ninguna línea seleccionada.",
     }
 else:
     T = {

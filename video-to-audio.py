@@ -34,7 +34,7 @@ import re
 import gi
 gi.require_version("Gtk",     "4.0")
 gi.require_version("Adw",     "1")
-gi.require_version("Nautilus","4.0")
+gi.require_version("Nautilus", "4.1")
 from gi.repository import GObject, Gtk, Adw, GLib, Pango, Gdk, Nautilus
 
 # ---------------------------------------------------------------------------
@@ -87,6 +87,29 @@ elif _lang.startswith("de"):
         "dest_folder":  "Ziel",
         "choose":       "Wählen…",
         "same_as_src":  "Gleicher Ordner wie Quelle",
+    }
+elif _lang.startswith("es"):
+    T = {
+        "menu_label":   "Extraer audio",
+        "title":        "Extracción de audio",
+        "format":       "Formato",
+        "quality":      "Calidad",
+        "quality_high": "Alta (320 kbps)",
+        "quality_med":  "Media (192 kbps)",
+        "quality_low":  "Baja (128 kbps)",
+        "quality_copy": "Copiar flujo (sin recodificar)",
+        "convert":      "Extraer",
+        "cancel":       "Cancelar",
+        "close":        "Cerrar",
+        "processing":   "Extrayendo…",
+        "file_done":    "✓ {name}",
+        "file_error":   "✗ {name}",
+        "all_done":     "Extracción completada — {ok} de {total} correctos.",
+        "cancelled":    "Extracción cancelada.",
+        "overwrite":    "El archivo ya existe — se sobrescribirá.",
+        "dest_folder":  "Destino",
+        "choose":       "Elegir…",
+        "same_as_src":  "Misma carpeta que el origen",
     }
 else:
     T = {
@@ -295,6 +318,7 @@ class VideoToAudioWindow(Adw.Window):
         # ── Liste des fichiers ────────────────────────────────────────────────
         files_label = Gtk.Label()
         files_label.set_markup(f"<b>{len(video_files)} fichier(s)</b>" if _lang.startswith("fr")
+                               else f"<b>{len(video_files)} archivo(s)</b>" if _lang.startswith("es")
                                else f"<b>{len(video_files)} file(s)</b>")
         files_label.set_halign(Gtk.Align.START)
         files_label.set_margin_start(16); files_label.set_margin_end(16)
